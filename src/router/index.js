@@ -13,7 +13,10 @@ const routes = [
     path: '/',
     redirect: '/Inicio',
   },
-  
+  {
+    path: '*',
+    component: () => import(/* webpackChunkName: "NotFound" */'../views/NotFound.vue') 
+  },
   {
     path: '/Inicio',
     name: 'Inicio',
